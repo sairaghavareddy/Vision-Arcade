@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hangman Game</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+
+<div class="container-fluid text-center">
+
+  <div class="row content">
+
+    <div class="col-sm-12">
+      <div class="well" id="headingWell">
+        <h1>Hangman Game</h1>
+        <p>Press any key on keyboard to get started!!!</p>
+      </div>
+    </div>
+
+  </div>
+ 
+  <div class="row content">
+
+    <div class="col-sm-8 text-left">
+      <div class="row content">
+
+        <div class="col-sm-12">
+          <div class="well">
+            <div id="spaces"></div>
+            <hr>
+            <h2>You just typed
+              <span id="user-text">
+                <strong>...Nothing.</strong>
+              </span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="col-sm-12 keys">
+          <div class="well">
+            <div class="col-sm-12">
+              <div id="line1">
+                <div id="a">a</div>
+                <div id="b">b</div>
+                <div id="c">c</div>
+                <div id="d">d</div>
+                <div id="e">e</div>
+                <div id="f">f</div>
+                <div id="g">g</div>
+                <div id="h">h</div>
+                <div id="i">i</div>
+                <div id="j">j</div>
+                <div id="k">k</div>
+                <div id="l">l</div>
+                <div id="m">m</div>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div id="line2">
+                <div id="n">n</div>
+                <div id="o">o</div>
+                <div id="p">p</div>
+                <div id="q">q</div>
+                <div id="r">r</div>
+                <div id="s">s</div>
+                <div id="t">t</div>
+                <div id="u">u</div>
+                <div id="v">v</div>
+                <div id="w">w</div>
+                <div id="x">x</div>
+                <div id="y">y</div>
+                <div id="z">z</div>
+              </div>
+            </div>
+            <!--  <h2>wrong Characters typed
+                <span id="wrong-text">
+                  <strong>...Nothing.</strong>
+                </span>
+              </h2>  -->
+            <h3>
+              <span id="question">Do you wish to continue?
+
+                <button class="btn btn-primary" type="submit" id="yes" onclick="playAgain()" disabled>Yes</button>
+                <!--  <button class="btn btn-primary" type="submit" id="no" onclick="notAgain()" disabled>No</button> -->
+                <button type="button" class="btn btn-primary" id="no" data-toggle="modal" data-target="#myModal" disabled>
+                  No
+                </button>
+              </span>
+            </h3>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 sidenav">
+      <div class="well" id="side1">
+        <h2>Number of guesses
+          <span id="numguess-text">
+            <strong>...Nothing.</strong>
+          </span>
+        </h2>
+      </div>
+      <div class="well" id="side2">
+        <div id="correctAnswer"></div>
+        <div id="answerImage"></div>
+        <h3>Hint:Animal</h3>
+        <!-- <h2>ComputerGuess is
+            <span id="comp-text">
+              <strong>...Nothing.</strong>
+            </span>
+          </h2> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Hangman Game</h4>
+      </div>
+      <div class="modal-body">
+        <p>Thanks for playing hope you liked my version of Hangman game!!!.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" onclick="closeFunc()" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="assets/javascript/game.js"></script>
+
+
+
+</body>
+
+</html>
